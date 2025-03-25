@@ -11,7 +11,7 @@
      ipr="trust200902" submissionType="IETF" category="std" version="3" docName="draft-blahaj-sidrops-rsm-latest"
      consensus="true" updates="9323">
   <front>
-    <title abbrev="RPKI Signed Checklists V2">RPKI Signed Messages (RSMs)</title>
+    <title abbrev="RPKI Signed Messages">Resource Public Key Infrastructure (RPKI) Signed Messages (RSMs)</title>
     <seriesInfo name="Internet-Draft" status="standard" value="draft-blahaj-sidrops-rsm-latest"/>
     <author fullname="Q Misell" initials="Q" surname="Misell" role="editor">
       <organization abbrev="AS207960">AS207960 Cyfyngedig</organization>
