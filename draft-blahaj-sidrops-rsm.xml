@@ -63,9 +63,9 @@
   <middle>
     <section>
       <name>Introduction</name>
-      <t>RPKI Signed Checklists
+      <t>RPKI Signed Checklists (RSC)
         <xref target="RFC9323"/>
-        do not signal the purpose of an RSC, nor its intended audience.
+        do not signal a purpose, nor its intended audience.
         In the context of processing by humans this is of little concern as the context in which e.g. a signed PDF was
         sent makes its purpose evident. However, in automated machine-to-machine protocols these ambiguities can lead
         to security vulnerabilities.
@@ -122,9 +122,9 @@
       <section>
         <name>End Entity Certificates</name>
 
-        <t>The Certification Authority (CA) <bcp14>MUST</bcp14> only sign one RSC with each EE certificate and
+        <t>The Certification Authority (CA) <bcp14>MUST</bcp14> only sign one RSM with each EE certificate and
           <bcp14>MUST</bcp14>
-          generate a new key pair for each new RSC. This type of EE certificate is termed a
+          generate a new key pair for each new RSM. This type of EE certificate is termed a
           "one-time-use" EE certificate (see<xref target="RFC6487" section="3"/>).
         </t>
       </section>
