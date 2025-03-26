@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>RPKI Signed Messages (RSMs)</title>
+<title>Resource Public Key Infrastructure (RPKI) Signed Messages (RSMs)</title>
 <meta content="Q Misell" name="author">
 <meta content="Job Snijders" name="author">
 <meta content="
@@ -1049,12 +1049,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">RPKI Signed Checklists V2</td>
+<td class="center">RPKI Signed Messages</td>
 <td class="right">March 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Misell &amp; Snijders</td>
-<td class="center">Expires 26 September 2025</td>
+<td class="center">Expires 27 September 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1070,12 +1070,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc9323" class="eref">9323</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-03-25" class="published">25 March 2025</time>
+<time datetime="2025-03-26" class="published">26 March 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-09-26">26 September 2025</time></dd>
+<dd class="expires"><time datetime="2025-09-27">27 September 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1089,7 +1089,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </dd>
 </dl>
 </div>
-<h1 id="title">RPKI Signed Messages (RSMs)</h1>
+<h1 id="title">Resource Public Key Infrastructure (RPKI) Signed Messages (RSMs)</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This document defines a Cryptographic Message Syntax (CMS) protected content type for use with the
@@ -1126,7 +1126,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 26 September 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 27 September 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1184,16 +1184,16 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-version" class="internal xref">Version</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
-                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-resources" class="internal xref">Resources</a></p>
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-purpose" class="internal xref">Purpose</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3">
-                <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-digest-algorith" class="internal xref">Digest algorith</a></p>
+                <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-audience" class="internal xref">Audience</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.4">
-                <p id="section-toc.1-1.5.2.4.1"><a href="#section-5.4" class="auto internal xref">5.4</a>.  <a href="#name-purpose" class="internal xref">Purpose</a></p>
+                <p id="section-toc.1-1.5.2.4.1"><a href="#section-5.4" class="auto internal xref">5.4</a>.  <a href="#name-resources" class="internal xref">Resources</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.5">
-                <p id="section-toc.1-1.5.2.5.1"><a href="#section-5.5" class="auto internal xref">5.5</a>.  <a href="#name-audience" class="internal xref">Audience</a></p>
+                <p id="section-toc.1-1.5.2.5.1"><a href="#section-5.5" class="auto internal xref">5.5</a>.  <a href="#name-digest-algorith" class="internal xref">Digest algorith</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.6">
                 <p id="section-toc.1-1.5.2.6.1"><a href="#section-5.6" class="auto internal xref">5.6</a>.  <a href="#name-hash" class="internal xref">Hash</a></p>
@@ -1273,9 +1273,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">RPKI Signed Checklists
+<p id="section-1-1">RPKI Signed Checklists (RSC)
         <span>[<a href="#RFC9323" class="cite xref">RFC9323</a>]</span>
-        do not signal the purpose of an RSC, nor its intended audience.
+        do not signal a purpose, nor its intended audience.
         In the context of processing by humans this is of little concern as the context in which e.g. a signed PDF was
         sent makes its purpose evident. However, in automated machine-to-machine protocols these ambiguities can lead
         to security vulnerabilities.<a href="#section-1-1" class="pilcrow">¶</a></p>
@@ -1325,9 +1325,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-end-entity-certificates">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-end-entity-certificates" class="section-name selfRef">End Entity Certificates</a>
         </h3>
-<p id="section-3.1-1">The Certification Authority (CA) <span class="bcp14">MUST</span> only sign one RSC with each EE certificate and
+<p id="section-3.1-1">The Certification Authority (CA) <span class="bcp14">MUST</span> only sign one RSM with each EE certificate and
           <span class="bcp14">MUST</span>
-          generate a new key pair for each new RSC. This type of EE certificate is termed a
+          generate a new key pair for each new RSM. This type of EE certificate is termed a
           "one-time-use" EE certificate (see<span><a href="https://rfc-editor.org/rfc/rfc6487#section-3" class="relref">Section 3</a> of [<a href="#RFC6487" class="cite xref">RFC6487</a>]</span>).<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 </section>
 </section>
@@ -1346,63 +1346,52 @@ svg :is([fill="white"], [fill^="#fff"]) {
       </h2>
 <p id="section-5-1">The content of an RSM indicates that as arbitrary binary message has been signed with a specific set of
         Internet Number Resources. An RSM is formally defined as follows:<a href="#section-5-1" class="pilcrow">¶</a></p>
-<div class="breakable lang-asn.1 sourcecode" id="section-5-2">
-<pre>RpkiSignedChecklist-2025
-{ iso(1) member-body(2) us(840) rsadsi(113549)
-  pkcs(1) pkcs9(9) smime(16) mod(0)
-  id-mod-rpkiSignedMessage-2025(TBD) }
+<div class="lang-asn.1 sourcecode" id="section-5-2">
+<pre>
 
-DEFINITIONS EXPLICIT TAGS ::= BEGIN
+RpkiSignedMessage-2025
+  { iso(1) member-body(2) us(840) rsadsi(113549)
+    pkcs(1) pkcs9(9) smime(16) mod(0)
+    id-mod-rpkiSignedMessage-2025(TBD) }
 
-  IMPORTS
-    CONTENT-TYPE, Digest, DigestAlgorithmIdentifier
-    FROM CryptographicMessageSyntax-2010 -- in [RFC6268]
+DEFINITIONS EXPLICIT TAGS ::=
+BEGIN
+
+IMPORTS
+  CONTENT-TYPE, Digest, DigestAlgorithmIdentifier
+  FROM CryptographicMessageSyntax-2010 -- in [RFC6268]
     { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)
       pkcs-9(9) smime(16) modules(0) id-mod-cms-2009(58) }
 
-    IPAddressOrRange, ASIdOrRange
-    FROM IPAddrAndASCertExtn -- in [RFC3779]
+  IPAddressOrRange, ASIdOrRange
+  FROM IPAddrAndASCertExtn -- in [RFC3779]
     { iso(1) identified-organization(3) dod(6) internet(1)
       security(5) mechanisms(5) pkix(7) mod(0)
-      id-mod-ip-addr-and-as-ident(30) };
+      id-mod-ip-addr-and-as-ident(30) }
 
-  ct-rpkiSignedMessage CONTENT-TYPE ::=
+  ResourceBlock
+  FROM id-mod-rpkiSignedChecklist-2022 -- in [RFC9323]
+    { iso(1) member-body(2) us(840) rsadsi(113549)
+      pkcs(1) pkcs9(9) smime(16) mod(0)
+      id-mod-rpkiSignedChecklist-2022(73) };
+
+ct-rpkiSignedMessage CONTENT-TYPE ::=
   { TYPE RpkiSignedMessage
     IDENTIFIED BY id-ct-signedMessage }
 
-  id-ct-signedMessage OBJECT IDENTIFIER ::=
+id-ct-signedMessage OBJECT IDENTIFIER ::=
   { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)
-    pkcs-9(9) id-smime(16) id-ct(1) TBD }
+    pkcs-9(9) id-smime(16) id-ct(1) signedMessage(TBD) }
 
-  RpkiSignedMessage ::= SEQUENCE {
-    version [0] INTEGER DEFAULT 0,
-    resources ResourceBlock,
-    digestAlgorithm DigestAlgorithmIdentifier,
-    purpose OBJECT IDENTIFIER
-    audience OBJECT IDENTIFIER
-    hash Digest
-  }
-
-  ResourceBlock ::= SEQUENCE {
-    asID [0] ConstrainedASIdentifiers OPTIONAL,
-    ipAddrBlocks [1] ConstrainedIPAddrBlocks OPTIONAL
-  } ( WITH COMPONENTS { ..., asID PRESENT} |
-      WITH COMPONENTS { ..., ipAddrBlocks PRESENT } )
-  -- at least one of asID or ipAddrBlocks MUST be present
-
-  ConstrainedIPAddrBlocks ::=
-    SEQUENCE (SIZE(1..MAX)) OF ConstrainedIPAddressFamily
-
-  ConstrainedIPAddressFamily ::= SEQUENCE {
-    addressFamily OCTET STRING (SIZE(2)),
-    addressesOrRanges SEQUENCE (SIZE(1..MAX)) OF IPAddressOrRange
-  }
-
-  ConstrainedASIdentifiers ::= SEQUENCE {
-    asnum [0] SEQUENCE (SIZE(1..MAX)) OF ASIdOrRange
-  }
-
-END</pre><a href="#section-5-2" class="pilcrow">¶</a>
+RpkiSignedMessage ::= SEQUENCE {
+    version [0]       INTEGER DEFAULT 0,
+    purpose           OBJECT IDENTIFIER
+    audience          OBJECT IDENTIFIER
+    resources         ResourceBlock,
+    digestAlgorithm   DigestAlgorithmIdentifier,
+    hash              Digest }
+END
+</pre><a href="#section-5-2" class="pilcrow">¶</a>
 </div>
 <section id="section-5.1">
         <h3 id="name-version">
@@ -1411,30 +1400,30 @@ END</pre><a href="#section-5-2" class="pilcrow">¶</a>
 <p id="section-5.1-1">The version number of the RpkiSignedMessage <span class="bcp14">MUST</span> be 0<a href="#section-5.1-1" class="pilcrow">¶</a></p>
 </section>
 <section id="section-5.2">
-        <h3 id="name-resources">
-<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-resources" class="section-name selfRef">Resources</a>
+        <h3 id="name-purpose">
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-purpose" class="section-name selfRef">Purpose</a>
         </h3>
-<p id="section-5.2-1">The resources in an RSM <span class="bcp14">MUST</span> be constructed as per <span><a href="https://rfc-editor.org/rfc/rfc9323#section-4.2" class="relref">Section 4.2</a> of [<a href="#RFC9323" class="cite xref">RFC9323</a>]</span>.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.2-1">The purpose field includes an OID identifying for which purpose the RSM was created.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
 </section>
 <section id="section-5.3">
-        <h3 id="name-digest-algorith">
-<a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-digest-algorith" class="section-name selfRef">Digest algorith</a>
+        <h3 id="name-audience">
+<a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-audience" class="section-name selfRef">Audience</a>
         </h3>
-<p id="section-5.3-1">The digest algorithm is used to create the message digest of the attested message.
-          This algorithm <span class="bcp14">MUST</span> be a hashing algorithm defined in <span>[<a href="#RFC7935" class="cite xref">RFC7935</a>]</span>.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-1">The audience fields includes an OID identifying for which audience the RSM was created, or that it was
+          created for the general audience.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
 </section>
 <section id="section-5.4">
-        <h3 id="name-purpose">
-<a href="#section-5.4" class="section-number selfRef">5.4. </a><a href="#name-purpose" class="section-name selfRef">Purpose</a>
+        <h3 id="name-resources">
+<a href="#section-5.4" class="section-number selfRef">5.4. </a><a href="#name-resources" class="section-name selfRef">Resources</a>
         </h3>
-<p id="section-5.4-1">The purpose field includes an OID identifying for which purpose the RSM was created.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
+<p id="section-5.4-1">The resources in an RSM <span class="bcp14">MUST</span> be constructed as per <span><a href="https://rfc-editor.org/rfc/rfc9323#section-4.2" class="relref">Section 4.2</a> of [<a href="#RFC9323" class="cite xref">RFC9323</a>]</span>.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
 </section>
 <section id="section-5.5">
-        <h3 id="name-audience">
-<a href="#section-5.5" class="section-number selfRef">5.5. </a><a href="#name-audience" class="section-name selfRef">Audience</a>
+        <h3 id="name-digest-algorith">
+<a href="#section-5.5" class="section-number selfRef">5.5. </a><a href="#name-digest-algorith" class="section-name selfRef">Digest algorith</a>
         </h3>
-<p id="section-5.5-1">The audience fields includes an OID identifying for which audience the RSM was created, or that it was
-          created for the general audience.<a href="#section-5.5-1" class="pilcrow">¶</a></p>
+<p id="section-5.5-1">The digest algorithm is used to create the message digest of the attested message.
+          This algorithm <span class="bcp14">MUST</span> be a hashing algorithm defined in <span>[<a href="#RFC7935" class="cite xref">RFC7935</a>]</span>.<a href="#section-5.5-1" class="pilcrow">¶</a></p>
 </section>
 <section id="section-5.6">
         <h3 id="name-hash">
@@ -1683,7 +1672,7 @@ END</pre><a href="#section-5-2" class="pilcrow">¶</a>
 </dd>
               <dd class="break"></dd>
 <dt id="section-9.6-2.22.1.5">File extension(s):</dt>
-              <dd style="margin-left: 1.5em" id="section-9.6-2.22.1.6">.sig<a href="#section-9.6-2.22.1.6" class="pilcrow">¶</a>
+              <dd style="margin-left: 1.5em" id="section-9.6-2.22.1.6">.rsm<a href="#section-9.6-2.22.1.6" class="pilcrow">¶</a>
 </dd>
               <dd class="break"></dd>
 <dt id="section-9.6-2.22.1.7">Macintosh file type code(s):</dt>
