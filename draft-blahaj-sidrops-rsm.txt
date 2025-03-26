@@ -4,9 +4,8 @@
 
 SIDR Operations                                           Q. Misell, Ed.
 Internet-Draft                                                  AS207960
-Updates: 9323 (if approved)                                  J. Snijders
-Intended status: Standards Track                           26 March 2025
-Expires: 27 September 2025
+Intended status: Standards Track                             J. Snijders
+Expires: 27 September 2025                                 26 March 2025
 
 
     Resource Public Key Infrastructure (RPKI) Signed Messages (RSMs)
@@ -72,7 +71,7 @@ Table of Contents
      5.2.  Purpose
      5.3.  Audience
      5.4.  Resources
-     5.5.  Digest algorith
+     5.5.  Digest algorithm
      5.6.  Hash
    6.  Well-known audiences and purposes
      6.1.  Anyone Audience
@@ -216,7 +215,7 @@ Table of Contents
 
 5.1.  Version
 
-   The version number of the RpkiSignedMessage MUST be 0
+   The version number of the RpkiSignedMessage MUST be 0.
 
 5.2.  Purpose
 
@@ -233,16 +232,17 @@ Table of Contents
    The resources in an RSM MUST be constructed as per Section 4.2 of
    [RFC9323].
 
-5.5.  Digest algorith
+5.5.  Digest algorithm
 
    The digest algorithm is used to create the message digest of the
-   attested message.  This algorithm MUST be a hashing algorithm defined
-   in [RFC7935].
+   attested message.  This algorithm MUST be a hash algorithm defined in
+   [RFC7935].
 
 5.6.  Hash
 
    The value of the hash field is the calculated message digest of the
-   attested message.
+   attested message.  This message is carried externally to the RSM.
+   That is, an RSM is a detached signature.
 
 6.  Well-known audiences and purposes
 

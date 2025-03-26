@@ -1065,9 +1065,6 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="workgroup">SIDR Operations</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
 <dd class="internet-draft">draft-blahaj-sidrops-rsm-latest</dd>
-<dt class="label-updates">Updates:</dt>
-<dd class="updates">
-<a href="https://www.rfc-editor.org/rfc/rfc9323" class="eref">9323</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
 <time datetime="2025-03-26" class="published">26 March 2025</time>
@@ -1193,7 +1190,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.5.2.4.1"><a href="#section-5.4" class="auto internal xref">5.4</a>.  <a href="#name-resources" class="internal xref">Resources</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.5">
-                <p id="section-toc.1-1.5.2.5.1"><a href="#section-5.5" class="auto internal xref">5.5</a>.  <a href="#name-digest-algorith" class="internal xref">Digest algorith</a></p>
+                <p id="section-toc.1-1.5.2.5.1"><a href="#section-5.5" class="auto internal xref">5.5</a>.  <a href="#name-digest-algorithm" class="internal xref">Digest algorithm</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.6">
                 <p id="section-toc.1-1.5.2.6.1"><a href="#section-5.6" class="auto internal xref">5.6</a>.  <a href="#name-hash" class="internal xref">Hash</a></p>
@@ -1397,7 +1394,7 @@ END
         <h3 id="name-version">
 <a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-version" class="section-name selfRef">Version</a>
         </h3>
-<p id="section-5.1-1">The version number of the RpkiSignedMessage <span class="bcp14">MUST</span> be 0<a href="#section-5.1-1" class="pilcrow">¶</a></p>
+<p id="section-5.1-1">The version number of the RpkiSignedMessage <span class="bcp14">MUST</span> be 0.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
 </section>
 <section id="section-5.2">
         <h3 id="name-purpose">
@@ -1419,17 +1416,18 @@ END
 <p id="section-5.4-1">The resources in an RSM <span class="bcp14">MUST</span> be constructed as per <span><a href="https://rfc-editor.org/rfc/rfc9323#section-4.2" class="relref">Section 4.2</a> of [<a href="#RFC9323" class="cite xref">RFC9323</a>]</span>.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
 </section>
 <section id="section-5.5">
-        <h3 id="name-digest-algorith">
-<a href="#section-5.5" class="section-number selfRef">5.5. </a><a href="#name-digest-algorith" class="section-name selfRef">Digest algorith</a>
+        <h3 id="name-digest-algorithm">
+<a href="#section-5.5" class="section-number selfRef">5.5. </a><a href="#name-digest-algorithm" class="section-name selfRef">Digest algorithm</a>
         </h3>
 <p id="section-5.5-1">The digest algorithm is used to create the message digest of the attested message.
-          This algorithm <span class="bcp14">MUST</span> be a hashing algorithm defined in <span>[<a href="#RFC7935" class="cite xref">RFC7935</a>]</span>.<a href="#section-5.5-1" class="pilcrow">¶</a></p>
+          This algorithm <span class="bcp14">MUST</span> be a hash algorithm defined in <span>[<a href="#RFC7935" class="cite xref">RFC7935</a>]</span>.<a href="#section-5.5-1" class="pilcrow">¶</a></p>
 </section>
 <section id="section-5.6">
         <h3 id="name-hash">
 <a href="#section-5.6" class="section-number selfRef">5.6. </a><a href="#name-hash" class="section-name selfRef">Hash</a>
         </h3>
-<p id="section-5.6-1">The value of the hash field is the calculated message digest of the attested message.<a href="#section-5.6-1" class="pilcrow">¶</a></p>
+<p id="section-5.6-1">The value of the hash field is the calculated message digest of the attested message. This message is
+          carried externally to the RSM. That is, an RSM is a detached signature.<a href="#section-5.6-1" class="pilcrow">¶</a></p>
 </section>
 </section>
 <section id="section-6">
