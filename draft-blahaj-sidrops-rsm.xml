@@ -9,7 +9,7 @@
 
 <rfc xmlns:xi="http://www.w3.org/2001/XInclude"
      ipr="trust200902" submissionType="IETF" category="std" version="3" docName="draft-blahaj-sidrops-rsm-latest"
-     consensus="true" updates="9323">
+     consensus="true">
   <front>
     <title abbrev="RPKI Signed Checklists V2">RPKI Signed Messages (RSMs)</title>
     <seriesInfo name="Internet-Draft" status="standard" value="draft-blahaj-sidrops-rsm-latest"/>
@@ -148,7 +148,7 @@
         Internet Number Resources. An RSM is formally defined as follows:
       </t>
 
-      <sourcecode type="asn.1"><![CDATA[RpkiSignedChecklist-2025
+      <sourcecode type="asn.1"><![CDATA[RpkiSignedMessage-2025
 { iso(1) member-body(2) us(840) rsadsi(113549)
   pkcs(1) pkcs9(9) smime(16) mod(0)
   id-mod-rpkiSignedMessage-2025(TBD) }
@@ -208,23 +208,20 @@ END]]></sourcecode>
       <section>
         <name>Version</name>
 
-        <t>The version number of the RpkiSignedMessage <bcp14>MUST</bcp14> be 0
-        </t>
+        <t>The version number of the RpkiSignedMessage <bcp14>MUST</bcp14> be 0.</t>
       </section>
 
       <section>
         <name>Resources</name>
 
-        <t>The resources in an RSM <bcp14>MUST</bcp14> be constructed as per <xref target="RFC9323" section="4.2"/>.
-        </t>
+        <t>The resources in an RSM <bcp14>MUST</bcp14> be constructed as per <xref target="RFC9323" section="4.2"/>.</t>
       </section>
 
       <section>
-        <name>Digest algorith</name>
+        <name>Digest algorithm</name>
 
         <t>The digest algorithm is used to create the message digest of the attested message.
-          This algorithm <bcp14>MUST</bcp14> be a hashing algorithm defined in <xref target="RFC7935"/>.
-        </t>
+          This algorithm <bcp14>MUST</bcp14> be a hash algorithm defined in <xref target="RFC7935"/>.</t>
       </section>
 
       <section>
@@ -244,7 +241,8 @@ END]]></sourcecode>
       <section>
         <name>Hash</name>
 
-        <t>The value of the hash field is the calculated message digest of the attested message.</t>
+        <t>The value of the hash field is the calculated message digest of the attested message. This message is
+          carried externally to the RSM. That is, an RSM is a detached signature.</t>
       </section>
 
     </section>
