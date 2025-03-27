@@ -1,7 +1,7 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-25T01:56:08.743968+00:00",
-  "repo": "AS207960/draft-blahaj-rsc-bis",
+  "timestamp": "2025-03-27T01:55:11.320602+00:00",
+  "repo": "AS207960/draft-blahaj-sidrops-rsm",
   "labels": [
     {
       "name": "bug",
@@ -50,5 +50,34 @@
     }
   ],
   "issues": [],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDONcowOM6QE-OZ",
+      "title": "small nits",
+      "url": "https://github.com/AS207960/draft-blahaj-sidrops-rsm/pull/1",
+      "state": "MERGED",
+      "author": "job",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-03-25T16:43:23Z",
+      "updatedAt": "2025-03-26T10:04:46Z",
+      "baseRepository": "AS207960/draft-blahaj-sidrops-rsm",
+      "baseRefName": "root",
+      "baseRefOid": "f75c95366ce6dccea438a215b93a8ad4a5453d17",
+      "headRepository": "job/draft-blahaj-sidrops-rsm",
+      "headRefName": "root",
+      "headRefOid": "4bd3e18f71df553ca6060e018a73407098b80492",
+      "closedAt": "2025-03-26T10:04:46Z",
+      "mergedAt": "2025-03-26T10:04:46Z",
+      "mergedBy": "TheEnbyperor",
+      "mergeCommit": {
+        "oid": "89b71eb4cbfebb5d200affa38cfafc8e14392617"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
